@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pup Stops of SF</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div id="page-title">
+        <h1>Pup Stops of SF</h1>
+        <h2>The happiest dog-friendly spots in SF that pamper pups with free water bowls, treats, and extra love</h2>
+    </div>
+
+    <div id="controls">
+        <div id="filters">
+            <span class="filters-label">Show:</span>
+
+            <div class="filters-options">
+                <label>
+                    <input type="checkbox" id="filter-treats" />
+                    Dog treats 🐾
+                </label>
+                <label>
+                    <input type="checkbox" id="filter-water" />
+                    Water bowls 💧
+                </label>
+                <label>
+                    <input type="checkbox" id="filter-beach" />
+                    Beaches 🏖️
+                </label>
+                <label>
+                    <input type="checkbox" id="filter-park" />
+                    Parks 🌳
+                </label>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="legend">
+        </div>
+
+    </div>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <svg id="map"></svg>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+
+    <script src="d3.js"></script>
+</body>
+</html>
