@@ -13,7 +13,7 @@ const beachCheckbox  = document.getElementById("filter-beach");
 const parkCheckbox   = document.getElementById("filter-park");
 
 const width = svg.node().clientWidth;
-const height = window.innerHeight;
+const height = svg.node().clientHeight;
 const mapInnerHeight = height - 80;
 
 svg.attr("width", width).attr("height", height);
@@ -45,7 +45,7 @@ Promise.all([
 
   const projection = d3.geoMercator()
     .fitSize(
-      [width, mapInnerHeight],
+      [width, height],
       { type: "FeatureCollection", features: allFeatures }
     );
 
