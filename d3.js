@@ -12,11 +12,12 @@ const waterCheckbox  = document.getElementById("filter-water");
 const beachCheckbox  = document.getElementById("filter-beach");
 const parkCheckbox   = document.getElementById("filter-park");
 
-const width = svg.node().clientWidth;
-const height = svg.node().clientHeight;
+const bounds = svg.node().getBoundingClientRect();
+const width = bounds.width;
+const height = bounds.height;
 const mapInnerHeight = height - 80;
 
-svg.attr("width", width).attr("height", height);
+svg.attr("viewBox", `0 0 ${width} ${height}`);
 
 function bringToFront(el) {
   if (el && el.parentNode) {
@@ -45,7 +46,7 @@ Promise.all([
 
   const projection = d3.geoMercator()
     .fitSize(
-      [width, height],
+      [width, mapInnerHeight],
       { type: "FeatureCollection", features: allFeatures }
     );
 

@@ -16,7 +16,7 @@ body {
 }
 
 svg {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: block;
     cursor: grab;
@@ -42,37 +42,36 @@ svg:active {
 
 #page-title h1 {
     margin: 0;
-    font-size: 54px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     font-family: "PawWow", sans-serif;
     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.7);
 }
 
 #page-title h2 {
-    margin: 6px 0 0 0;
+    margin: 4px 0 0 0;
     font-family: "Fredoka", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 350;
     color: #555;
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
 }
 
 #controls {
     position: fixed;
-    top: 20px;
     bottom: 20px;
     left: 12px;
     z-index: 10;
     background: rgba(255, 255, 255, 0.95);
-    padding: 12px 14px;
+    padding: 7px 10px;
     border-radius: 10px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     width: auto;
     max-width: none;
     display: inline-block;
     font-family: "Fredoka", sans-serif;
-    font-size: 18px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1;
     backdrop-filter: blur(8px);
 }
 
