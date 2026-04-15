@@ -12,7 +12,7 @@ const waterCheckbox  = document.getElementById("filter-water");
 const beachCheckbox  = document.getElementById("filter-beach");
 const parkCheckbox   = document.getElementById("filter-park");
 
-const width  = window.innerWidth;
+const width = svg.node().clientWidth;
 const height = window.innerHeight;
 const mapInnerHeight = height - 80;
 

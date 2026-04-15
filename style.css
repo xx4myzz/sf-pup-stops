@@ -17,8 +17,7 @@ body {
 
 svg {
     width: 100%;
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
     display: block;
     cursor: grab;
 }
@@ -60,7 +59,7 @@ svg:active {
 
 #controls {
     position: fixed;
-    top: 700px;
+    bottom: 20px;
     left: 12px;
     z-index: 10;
     background: rgba(255, 255, 255, 0.95);
