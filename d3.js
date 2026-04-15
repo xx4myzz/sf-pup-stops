@@ -15,7 +15,9 @@ const parkCheckbox   = document.getElementById("filter-park");
 const bounds = svg.node().getBoundingClientRect();
 const width = bounds.width;
 const height = bounds.height;
-const mapInnerHeight = height - 80;
+
+const topPadding = 3;
+const bottomPadding = 20;
 
 svg.attr("viewBox", `0 0 ${width} ${height}`);
 
@@ -45,10 +47,13 @@ Promise.all([
   );
 
   const projection = d3.geoMercator()
-    .fitSize(
-      [width, mapInnerHeight],
-      { type: "FeatureCollection", features: allFeatures }
-    );
+  .fitExtent(
+    [
+      [0, topPadding],
+      [width, height - bottomPadding]
+    ],
+    { type: "FeatureCollection", features: allFeatures }
+  );
 
   const path = d3.geoPath().projection(projection);
 
